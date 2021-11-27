@@ -61,7 +61,9 @@ const Products = () => {
 	return (
 		<>
 			{loading ? (
-				<Loader />
+				<div className='my-4'>
+					<Loader />
+				</div>
 			) : (
 				<>
 					<div className='card-header' style={{ background: '#212529' }}>
@@ -83,17 +85,17 @@ const Products = () => {
 							</div>
 							<div className='col'>
 								<form onSubmit={onFormSubmit}>
-									<div class='input-group'>
+									<div className='input-group'>
 										<input
 											type='text'
-											class='form-control'
+											className='form-control'
 											placeholder='Search...'
 											value={searchInput}
 											name='q'
 											onChange={(e) => setSearchInput(e.target.value)}
 										/>
-										<div class='input-group-append'>
-											<button class='btn btn-secondary' type='submit'>
+										<div className='input-group-append'>
+											<button className='btn btn-secondary' type='submit'>
 												<img src={searchIcon} alt='search' style={{ width: '20px' }} />
 											</button>
 										</div>
@@ -104,20 +106,23 @@ const Products = () => {
 					</div>
 
 					<div className='container my-4'>
-						<div class='row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-4'>
+						<div className='row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-4'>
 							{products.map((product) => (
-								<div class='col' key={product.id}>
-									<div class='card h-100'>
-										<div class='img-hover-zoom h-100'>
+								<div className='col' key={product.id}>
+									<div className='card h-100'>
+										<div className='img-hover-zoom h-100'>
 											<Link to={`/details/${product.id}`}>
-												<img src={product.Img} class='card-img-top h-100 w-100' alt='...' />
+												<img src={product.Img} className='card-img-top h-100 w-100' alt='...' />
 											</Link>
 										</div>
-										<div class='card-body'>
-											<div class='d-flex justify-content-between' style={{ alignItems: 'center' }}>
-												<h6 class='card-title mb-0'>{product.Title}</h6>
+										<div className='card-body'>
+											<div
+												className='d-flex justify-content-between'
+												style={{ alignItems: 'center' }}
+											>
+												<h6 className='card-title mb-0'>{product.Title}</h6>
 											</div>
-											<hr class='' />
+											<hr className='' />
 
 											<Link
 												to={`/details/${product.id}`}

@@ -189,7 +189,7 @@ const Footer = () => {
 			</div>
 
 			<footer className='text-center text-white p-4' style={{ background: '#30353E' }}>
-				© 2021 Copyright :
+				© 2021 Copyright&nbsp;:&nbsp;
 				<a
 					rel='noopener noreferrer'
 					href='https://www.facebook.com/tarak.guezguez'
